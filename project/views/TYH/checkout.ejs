@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <% include ../common/meta.ejs%>
+    <title>结算 - 榆杨</title>
+    <% include ../common/common_links.ejs%>
+    <!--这里引用自己的css-->
+    <link rel="stylesheet" href="./css/personal-center/FYK/address.css">
+    <link rel="stylesheet/less" href="./css/shop/checkout.css">
+</head>
+<body>
+<% include ../common/nav.ejs%>
+
+<section id="checkout">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <form action="#" method="get">
+                    <div class="row">
+                        <h4>收货地址</h4>
+                        <div class="col-xs-12">
+                            <div class="addr_box">
+                            <!--    <div class="addr_item addr_default checked" value="">
+                                    <p>
+                                        <span>张三</span>
+                                        <span>16283726987</span><br>
+                                        <span>福建</span>
+                                        <span>浦江</span>
+                                        <span>涵江区</span><br>
+                                        <span>这里是具体地址</span>
+                                    </p>
+                                    <div class="addr_foot">
+                                        <span class="pull-right">
+                                            <i class="fa fa-edit"></i>
+                                            &nbsp;
+                                            <i class="fa fa-trash-o"></i>
+                                            &nbsp;
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="addr_item">
+                                    <p>
+                                        <span>张三</span>
+                                        <span>16283726987</span><br>
+                                        <span>福建</span>
+                                        <span>浦江</span>
+                                        <span>涵江区</span><br>
+                                        <span>这里是具体地址</span>
+                                    </p>
+                                    <div class="addr_foot">
+                                        <span class="pull-right">
+                                            <i class="fa fa-edit"></i>
+                                            &nbsp;
+                                            <i class="fa fa-trash-o"></i>
+                                            &nbsp;
+                                        </span>
+                                    </div>
+                                </div>-->
+                                <%for(let i=0;i<addrData.length;i++){%>
+                                <% let defaultClass='' %>
+                                <% if (addrData[i].addr_is_default==='true'){defaultClass='addr_default checked'} %>
+                                <div class="addr_item <%=defaultClass %> " addr="<%=addrData[i].addr_id%>">
+                                    <p>
+                                        <span><%=addrData[i].addressee_name%></span>
+                                        <span><%=addrData[i].addressee_tel%></span><br>
+                                        <span><%=addrData[i].addr_province%></span>
+                                        <span><%=addrData[i].addr_city%></span>
+                                        <span><%=addrData[i].addr_district%></span><br>
+                                        <span><%=addrData[i].addr_detail%></span>
+                                    </p>
+                                    <div class="addr_foot">
+                                        <span class="pull-right">
+                                            <i class="fa fa-edit"></i>
+                                            &nbsp;
+                                            <i class="fa fa-trash-o"></i>
+                                            &nbsp;
+                                        </span>
+                                    </div>
+                                </div>
+                                <%}%>
+                                <div class="add_addr" data-toggle="modal" data-target="#myAddress">
+                                    <i class="fa fa-plus-circle"></i>
+                                    添加收货地址
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="row">
+                        <div class="checkbox">
+                            <% for (let i=0;i<SKUData.length;i++){%>
+                            <div class="checkout_item">
+                                <a href="#" class="col-xs-2">
+                                    <img src="<%=SKUData[i].SKU_pic_path%>>" alt="<%=SKUData[i].spec_option_value_color%><%=SKUData[i].spec_option_value_style%>">
+                                </a>
+                                <div class="item_title col-xs-2">
+                                    <div>
+                                        <strong><%=SKUData[i].SKU_name%>></strong><br><%=SKUData[i].spec_option_value_color%><%=SKUData[i].spec_option_value_style%>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">预计 2019-06-01前发货</div>
+                                <div class="col-xs-1">￥<%=SKUData[i].sell_price%>></div>
+                                <div class="col-xs-2">
+                                    <strong>×<%=SKUData[i].shopping_car_SKU_num%></strong>
+                                </div>
+                            </div>
+                            <%}%>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 separator"></div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h4>发票信息</h4>
+                            <label>
+                                <input type="checkbox"> 我要开发票
+                            </label>
+                            <br>
+                            <h4>订单备注</h4>
+                            <label>
+                                <textarea class="form-control" rows="3" cols="40"></textarea>
+                            </label>
+                        </div>
+                        <div class="col-xs-6 price_info">
+                            <div class="col-xs-6">
+                                <b>¥6598</b><br>
+                                <b>免邮</b><br>
+                                <b>¥6598</b>
+                            </div>
+                            <div class="col-xs-6">
+                                <span>商品合计</span><br>
+                                <span>运费</span><br>
+                                <span>实付</span>
+                            </div>
+                            <div class="col-xs-10">
+                                <label>
+                                    <input type="checkbox">
+                                    我已同意
+                                    <a href="./pages/LJC/servicefwbz.html">
+                                        《榆杨物流及售后协议》
+                                    </a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row checkout_footer">
+                        <div class="col-xs-12 separator"></div>
+                        <div class="col-xs-4">
+                            <div class="col-xs-4 middle">
+                                地址：
+                            </div>
+                            <div class="col-xs-8">
+                                张三 福建 莆田 涵江区 <br>
+                                皇后大道东35号
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-xs-offset-4">
+                            <div class="col-xs-5 middle">
+                                实付：
+                                <strong>¥6598</strong>
+                            </div>
+                            <div class="col-xs-7 middle">
+                                <a href="pay.html">
+                                    <button type="button" class="btn btn-primary pull-right">结算</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<% include ../common/footer.ejs%>
+
+<!-- Modal -->
+<div class="modal fade" id="myAddress" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">添加收货地址</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body address-modal">
+                <h6>以下均为必填项，请认真填写，避免收货时发生意外</h6>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="username">姓名：</span>
+                            <input type="text" class="form-control" placeholder="收货人姓名"
+                                   aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="phone">手机：</span>
+                            <input type="text" class="form-control" placeholder="收货人手机号"
+                                   aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <h5>收货地址：</h5>
+                <div class="row address-select" id="target" data-toggle="distpicker"><!-- container -->
+                    <select class="form-control col-md-3" name="" id="sheng" data-province="---- 请选择省 ----"></select>
+                    <!-- 省 -->
+                    <select class="form-control col-md-3" name="" id="shi" data-city="---- 请选择市 ----"></select>
+                    <!-- 市 -->
+                    <select class="form-control col-md-3" name="" id="qu" data-district="---- 请选择区 ----"></select>
+                    <!-- 区 -->
+                </div>
+                <div class="address-input">
+                    <input type="text" class="form-control" id="detailed_address" placeholder="详细地址">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../common/common_scripts.ejs%>
+<!--这里引用自己的js-->
+<!--地址插件-->
+<script src="../../node_modules/distpicker/dist/distpicker.min.js"></script>
+<script src="./js/shop/checkout.js"></script>
+</body>
+</html>

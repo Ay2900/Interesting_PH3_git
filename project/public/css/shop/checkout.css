@@ -1,0 +1,106 @@
+body {
+  padding-top: 100px;
+}
+.addr_box .addr_item {
+  height: 100px;
+  width: 180px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #1e2022;
+  font: 400 0.8em '微软雅黑';
+  float: left;
+  margin-left: 20px;
+}
+.addr_box .addr_item:hover {
+  cursor: pointer;
+}
+.addr_box .addr_item.checked {
+  border: 3px solid #1e2022;
+}
+.addr_box .addr_item.addr_default .addr_foot:before {
+  content: '';
+  display: block;
+  float: left;
+  height: 1.2rem;
+  width: 2.2rem;
+  background: url(../../images/addr_default.png) no-repeat center;
+  background-size: 100% auto;
+}
+.addr_box .add_addr {
+  height: 100px;
+  width: 180px;
+  padding: 10px;
+  float: left;
+  margin-left: 20px;
+  border: 1px dashed #52616b;
+  font: 400 0.8em '微软雅黑';
+  line-height: 83px;
+  text-align: center;
+}
+.addr_box .add_addr:hover {
+  cursor: pointer;
+}
+/*分隔符*/
+.separator {
+  height: 2px;
+  background-color: #52616b;
+  margin: 30px 0;
+}
+.checkout_item {
+  overflow: hidden;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+  height: 90px;
+}
+.checkout_item > * {
+  position: absolute;
+  top: 70%;
+  margin-right: 50px;
+}
+.checkout_item a {
+  margin-top: -70px;
+}
+.checkout_item a img {
+  height: 90px;
+  width: 120px;
+}
+.checkout_item div:nth-of-type(1) {
+  left: 15%;
+  margin-top: -22px;
+}
+.checkout_item div:nth-of-type(2) {
+  left: 50%;
+  margin-top: -30px;
+}
+.checkout_item div:nth-of-type(3) {
+  right: 7%;
+  margin-top: -30px;
+}
+.checkout_item div:nth-of-type(4) {
+  right: -10%;
+  margin-top: -30px;
+}
+.price_info {
+  position: relative;
+  top: 25px;
+  left: 30px;
+}
+.price_info .col-xs-6 > * {
+  line-height: 2em;
+}
+.price_info > div {
+  margin-top: 20px;
+  float: right;
+}
+.checkout_footer {
+  padding-bottom: 20px;
+}
+.checkout_footer > div {
+  margin-top: 10px;
+}
+.checkout_footer > div .middle {
+  margin-top: 1em;
+}
+/*# sourceMappingURL=checkout.css.map */

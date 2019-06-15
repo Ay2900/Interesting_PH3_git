@@ -1,0 +1,135 @@
+*{
+    border:0;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url("../../images/lgbj.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    /*background-size: contain;*/
+
+}
+@media screen and (max-width: 1200px) {
+    .lgk{
+        width: 250px;
+        margin: 0 auto;
+        background-color: #f1f1f1;
+    }
+
+    /*.lgbtn{*/
+        /*width: 190px;*/
+    /*}*/
+    .lgfs{
+        width: 220px;
+        margin-left: 100px;
+    }
+    /*.sjh{*/
+        /*width:250px;*/
+    /*}*/
+}
+a{
+    text-decoration: none;
+}
+.dlk{
+    margin-top: 100px;
+    /*width: 1600px;*/
+
+
+}
+.lgk{
+    border: 1px solid rgba(158, 158, 158, 0.66);
+    /*border-radius: 10px;*/
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1);
+    padding-bottom: 20px;
+    background-color: #f1f1f1;
+}
+h1{
+    color: black;
+    font-size: 30px;
+
+}
+.qh{
+    border:1px solid rgba(215, 215, 215, 0.75);
+    height:50px;
+    margin-top: 16px;
+    width: 12%;
+    text-align: center;
+    background-color: rgba(254, 254, 254, 0.99);
+
+
+}
+.lgsjh{
+    border:1px solid rgba(215, 215, 215, 0.75);
+    height:50px;
+    margin-top: 16px;
+    width: 74%;
+    margin-left: -5px;
+
+}
+.yzm{
+    border:1px solid rgba(215, 215, 215, 0.75);
+    height:50px;
+    margin-top: 16px;
+    width: 60%;
+
+}
+.hqyzm{
+    border:1px solid rgba(215, 215, 215, 0.75);
+    height:50px;
+    margin-top: 16px;
+    width: 26%;
+    margin-left: -5px;
+    background-color: rgba(255,255,255,0.66);
+    color: rgba(84,106,255,0.99);
+
+}
+input::-webkit-input-placeholder{
+    color: rgb(157, 157, 157);
+}
+.lgbtn{
+    color: white;
+    background-color: rgba(164, 164, 164, 0.94);
+    height:50px;
+    font-size: 14px;
+    margin-top: 25px;
+    width: 86%;
+}
+.lgbtn:hover{
+    background-color: rgba(146, 146, 146, 0.94);
+
+}
+.shu{
+    color: rgba(215, 215, 215, 0.75);
+}
+.lgsj{
+    text-align: left;
+    color: rgb(155, 155, 155);
+    float: left;
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 33px;
+}
+.lgsj:hover{
+    color: rgb(80, 80, 80);
+    text-decoration: none;
+}
+.lgfs{
+    margin-top: 12px;
+    width: 450px;
+}
+.lgtp{
+    max-width:60px;
+    max-height: 60px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.zcmm{
+    margin-left: 15%;
+}
+.dxyzm{
+    margin-left: -50px;
+}
+
+
+

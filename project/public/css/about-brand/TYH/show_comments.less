@@ -1,0 +1,138 @@
+@item-width: 230px;
+@item-box-width: @item-width+20px;
+section:first-of-type {
+    padding-top: 50px;
+
+    .afflatus-Banner {
+        background-image: url(../../../images/show_comments/banner.jpg);
+    }
+}
+
+@media screen and (min-width: @item-box-width*6) {
+    .comment_wrapper {
+        width: @item-width*6;
+    }
+}
+
+@media screen and (min-width: @item-box-width*5) and (max-width: @item-box-width*6) {
+    .comment_wrapper {
+        width: @item-width*5;
+    }
+}
+
+@media screen and (min-width: @item-box-width*4) and (max-width: @item-box-width*5) {
+    .comment_wrapper {
+        width: @item-width*4;
+    }
+}
+
+@media screen and (min-width: @item-box-width*3)  and (max-width: @item-box-width*4) {
+    .comment_wrapper {
+        width: @item-width*3;
+    }
+}
+
+@media screen and (min-width: @item-box-width*2) and (max-width: @item-box-width*3) {
+    .comment_wrapper {
+        width: @item-width*2;
+    }
+}
+
+@media screen and (max-width: @item-box-width*1) {
+    .comment_wrapper {
+        width: @item-width*1;
+    }
+}
+
+.comment_wrapper {
+    //outline: 1px solid rebeccapurple;
+    margin: 0 auto;
+
+    .one_col {
+        width: @item-width;
+        float: left;
+
+        .single_comment {
+            display: block;
+            cursor: pointer;
+            margin: 20px 10px;
+
+            > img {
+                width: 100%;
+            }
+
+            > div {
+                padding: 20px;
+                background-color: #fff;
+                font-size: 5px;
+            }
+
+            .user_icon {
+                height: 30px;
+                margin-right: 5px;
+                width: 30px;
+                border-radius: 50%;
+                overflow: hidden;
+                float: left;
+            }
+
+            .user_info {
+                float: left;
+            }
+
+            .pic_num {
+                float: right;
+            }
+        }
+    }
+}
+.modal-dialog{
+    width: auto;
+}
+#comment_modal {
+    div.modal-content{
+        width: 80vw;
+        position: center;
+        margin: 0 auto;
+    }
+    div.left {
+        float: left;
+        width: 80%;
+        min-height: 85vh;
+        img{
+            width: 100%;
+        }
+    }
+
+    div.right {
+        float: right;
+        width: 19%;
+        min-height: 85vh;
+        .comment_header{
+            padding: 5px 0;
+            border-bottom: 1px solid gray;
+            >div:first-child{
+                float: left;
+            }
+            >div:nth-child(2){
+                float: right;
+                img{
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .comment_content{
+            padding: 5px;
+        }
+        a{
+            display: block;
+            width: 50%;
+            margin: 0 auto;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

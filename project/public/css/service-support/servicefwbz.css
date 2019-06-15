@@ -1,0 +1,379 @@
+*{
+    font-family: 微软雅黑;
+}
+body{
+    padding-top:60px;
+    position: relative;
+}
+#beijing1{
+    /*width: 100%;*/
+    height: 660px;
+    background-image: url("../../images/services/bj1.jpg");
+    background-size:100% auto  ;
+    margin-top: -10px;
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+}
+#beijing2{
+    /*width: 100%;*/
+    height: 660px;
+    /*min-width: 1000px;*/
+    /*min-height: 200px;*/
+    background-image: url("../../images/services/bj2.jpg");
+    background-size:100% auto ;
+    /*margin-top: -10px;*/
+    background-repeat: no-repeat;
+    /*background-size: contain;*/
+    margin-top: 120px;
+    overflow: hidden;
+}
+
+/*侧栏*/
+.celan{
+    margin-left: -120px;
+}
+.list-group{
+    /*position: fixed;*/
+    /*top:100px;*/
+    z-index: 999;
+    /*margin-left: -120px;*/
+}
+
+#slide>a{
+    width: 200px;
+    height: 50px;
+    /*margin-left: -120px;*/
+    /*display: inline-block;*/
+    border: none;
+    font-size:25px;
+    color: #000;
+    font-weight: 600;
+    /*line-height: 40px;*/
+    cursor: pointer;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+#slide>a:hover{
+    background-color: transparent;
+}
+#slide>a:visited{
+    background-color: transparent;
+}
+#slide>a:link{
+    background-color: transparent;
+}
+#slide:first-child{
+    margin-top: 80px;
+}
+#slide ul{
+    width: 180px;
+    /*height: 100px;*/
+    /*transition: all .3s;*/
+
+}
+
+#slide li{
+    width: 180px;
+    height: 20px;
+    margin-left: 20px;
+    margin-top: 18px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    list-style: none;
+    /*display: none;*/
+    cursor: pointer;
+}
+.sl11,.sl21,.sl31,.sl41{
+    display: none;
+}
+/*服务内容*/
+#title1{
+    background-color: rgba(239, 239, 239, 0.49);
+    color: black;
+    height: 90px;
+    /*margin-top: 60px;*/
+    border: none;
+
+
+}
+#title2 {
+    background-color: rgba(239, 239, 239, 0.49);
+    color: black;
+    height: 90px;
+    /*margin-top: 60px;*/
+    border: none;
+}
+
+
+
+#title3{
+    background-color: rgba(239, 239, 239, 0.49);
+    color: black;
+    height: 90px;
+    /*margin-top: 60px;*/
+    border: none;
+
+
+}
+#title5{
+    background-color: rgba(239, 239, 239, 0.49);
+    color: black;
+    height: 90px;
+    /*margin-top: 60px;*/
+    border: none;
+
+
+}
+.mySp1{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+   margin-top: 150px;
+    margin-left: 170px;
+    display: inline-block;
+    width: 600px;
+    height: 80px;
+}
+.wd{
+    margin-left: 120px;
+    /*width: 1200px;*/
+}
+.myP1{
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.myH2{
+    font-size: 21px;
+    font-weight: 100;
+    margin-left: 30px;
+
+}
+#linux{
+    border-radius: 0;
+    border: 1px solid #d5d5d5;
+    width: 110%;
+}
+#linux2{
+    border-radius: 0;
+    border: 1px solid #d5d5d5;
+    width: 110%;
+}
+#linux3{
+    border-radius: 0;
+    border: 1px solid #d5d5d5;
+    width: 110%;
+}
+#linux5{
+    border-radius: 0;
+    border: 1px solid #d5d5d5;
+    width: 110%;
+}
+.q1{
+    width: 1000px;
+    height: 300px;
+    margin-top: 30px;
+}
+.q2{
+    width: 1000px;
+    height: 200px;
+    margin-top: 50px;
+}
+.q3{
+    width: 1000px;
+    height: 470px;
+    margin-top: 50px;
+}
+.q1l{
+    width: 20%;
+    height: 96px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 23px;
+    margin-left: 20px;
+}
+.q1r{
+    width: 70%;
+    height: 200px;
+    float: right;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+.q1r2{
+    width: 70%;
+    height: 100px;
+    float: right;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+.q1r3{
+    width: 70%;
+    height: 80px;
+    float: right;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+.q1r4{
+    width: 70%;
+    height: 60px;
+    float: right;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+.myP2{
+    width: 80%;
+    height: 160px;
+    /*float: right;*/
+    line-height: 30px;
+
+    display: inline-block;
+}
+.mySp2{
+    display: inline-block;
+    height: 200px;
+    width: 30px;
+    vertical-align: top;
+    padding-top: 5px;
+}
+.myP3{
+     width: 80%;
+     height: 180px;
+     /*float: right;*/
+    line-height: 30px;
+
+     display: inline-block;
+ }
+.mySp3{
+    display: inline-block;
+    height: 200px;
+    width: 30px;
+    vertical-align: top;
+}
+.mySp4{
+    display: inline-block;
+    height: 100px;
+    width: 30px;
+    vertical-align: top;
+    padding-top: 5px;
+}
+.mySp12{
+    display: inline-block;
+    height: 150px;
+    width: 30px;
+    vertical-align: top;
+    padding-top: 5px;
+}
+.myP4{
+    width: 80%;
+    height: 100px;
+    /*float: right;*/
+
+    display: inline-block;
+}
+.myP5{
+    width: 80%;
+    height: 60px;
+    /*float: right;*/
+    line-height: 30px;
+
+    display: inline-block;
+}
+.myP6{
+    width: 80%;
+    height: 40px;
+    /*float: right;*/
+    line-height: 30px;
+
+    display: inline-block;
+}
+.myP7{
+     width: 80%;
+     height: 80px;
+     /*float: right;*/
+     line-height: 30px;
+
+     display: inline-block;
+ }
+.myP8{
+     width: 80%;
+     height: 160px;
+     /*float: right;*/
+     line-height: 30px;
+
+     display: inline-block;
+ }
+.myP9{
+    width: 80%;
+    height: 100px;
+    /*float: right;*/
+    line-height: 30px;
+
+    display: inline-block;
+}
+.myP10{
+    width: 80%;
+    height: 100px;
+    /*float: right;*/
+    line-height: 30px;
+
+    display: inline-block;
+}
+.myP11{
+    width: 80%;
+    height: 80px;
+    /*float: right;*/
+    line-height: 30px;
+
+    display: inline-block;
+}
+.q1r5{
+    width: 70%;
+    height: 140px;
+    float: right;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+.q1r6{
+    width: 70%;
+    height: 140px;
+    float: right;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+.q1r9{
+    width: 70%;
+    height: 80px;
+    float: right;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+.q1r15{
+    width: 70%;
+    height: 130px;
+    float: right;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+.lx{
+    width: 60%;
+    height: 30px;
+    /*float: right;*/
+    line-height: 30px;
+    display: inline-block;
+    font-weight: bold;
+
+}
+.sm{
+    /*width:100%;*/
+    height: 450px;
+    background-color: white;
+    text-align: center;
+    padding-top: 70px;
+    overflow: hidden;
+}
+.wzsm{
+    font-size: 27px;
+    font-weight:bold;
+    line-height: 49px;
+}
