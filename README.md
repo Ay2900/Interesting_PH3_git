@@ -1,3 +1,17 @@
+## 6/15更新
+
+1. 更新node_modules;
+
+2. 编译bootstrap，删除原bootstrap及costume bootstrap；
+
+3. 尝试修复 uglify-js；
+
+4. 上传项目至GitHub：
+
+   https://github.com/AC-0308/Interesting_PH3_git.git
+
+5. 
+
 ## 6-13更新
 
 1. 数据图片路径录入方式变更；
