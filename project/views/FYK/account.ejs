@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>个人资料</title>
+    <% include ../common/common_links.ejs %>
+    <!--this page-->
+    <link rel="stylesheet" href="../../css/personal-center/FYK/account.css">
+</head>
+<body>
+<!--导航部分-->
+<header>
+    <% include ../common/nav.ejs %>
+</header>
+<!--导航（完）-->
+<!--中间部分-->
+<section class="container middle-content" id="personal_center">
+    <div class="row">
+        <div class="col-lg-2">
+            <nav>
+                <h4 class="navH4">个人中心</h4>
+                <ul class="navUl" >
+                    <li><a href="../CH/vip.html">会员中心</a></li>
+                    <li><a href="../FYK/me.html">我的资料</a></li>
+                    <li><a href="../FYK/editinfo.html" >修改资料</a></li>
+                    <li><a href="../FYK/account.html" class="borderBottom">账户安全</a></li>
+                    <li><a href="../FYK/address.html">收货地址</a></li>
+                </ul>
+                <h4 class="navH4">我的订单</h4>
+                <ul class="navUl">
+                    <li><a href="../CH/Orders.html">所有订单</a></li>
+                    <li><a href="../CH/Not%20paying.html">待付款</a></li>
+                    <li><a href="../CH/Payment%20has%20been.html">待收货</a></li>
+                    <li><a href="../CH/completed.html">已完成</a></li>
+                    <li><a href="../FYK/messages.html">我的收藏</a></li>
+                    <li><a href="../CH/show%20oders.html">我的晒单</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-10 personal_center_content">
+            <div class="content">
+                <h3>账户安全</h3>
+                <hr>
+                <section class="account">
+                    <ul>
+                        <li>
+                            <div class="icon-left"><i class="fa fa-lock fa-2x"></i></div>
+                            <div class="text-title">
+                                <p>账号密码</p>
+                                <p>用于保护帐号信息和登录安全</p>
+                            </div>
+                            <div class="btn-alter">
+                                <button type="button" class="btn btn-default" id="alter_password" data-toggle="modal"
+                                        data-target="#modal_password">修改
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-left"><i class="fa fa-envelope fa-lg"></i></div>
+                            <div class="text-title">
+                                <p>安全邮箱</p>
+                                <p>安全邮箱将可用于登录小米帐号和重置密码</p>
+                            </div>
+                            <div class="btn-alter">
+                                <button type="button" class="btn btn-default" id="alter_Email" data-toggle="modal"
+                                        data-target="#modal_email">绑定
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-left"><i class="fa fa-mobile fa-2x"></i></div>
+                            <div class="text-title">
+                                <p>安全手机 <span>182******90</span></p>
+                                <p>安全手机可以用于登录小米帐号，重置密码或其他安全验证</p>
+                            </div>
+                            <div class="btn-alter">
+                                <button type="button" class="btn btn-default" id="alter_phone" data-toggle="modal"
+                                        data-target="#modal_phone">修改
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <!-- Modal password -->
+        <div class="modal fade" id="modal_password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">修改密码</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body password-modal-body">
+                        <div class="old_password" id="old_password">
+                            <label class="">原密码</label>
+                            <input type="text" class="form-control" placeholder="输入原密码">
+                        </div>
+                        <div class="new_password" id="new_password">
+                            <label class="">新密码</label>
+                            <input type="text" class="form-control" placeholder="输入新密码">
+                            <input type="text" class="form-control" placeholder="重复新密码">
+                            <p>密码长度8~16位，数字、字母、字符至少包含两种</p>
+                        </div>
+                        <div class="verification" id="verification_password">
+                            <label class="">验证码</label>
+                            <input type="text" class="form-control" placeholder="输入验证码">
+                            <img src="../../images/fyk/getCode.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal email -->
+        <div class="modal fade" id="modal_email" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel2">绑定安全邮箱</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body email-modal-body">
+                        <div class="step-email">
+                            <p>输入新邮箱</p>
+                            <p>验证新邮箱</p>
+                            <p>完成</p>
+                        </div>
+                        <div class="new_email" id="new_email">
+                            <label class="">请输入新的安全邮箱地址</label>
+                            <input type="text" class="form-control" placeholder="请输入邮箱">
+                        </div>
+                        <div class="verification" id="verification_email">
+                            <input type="text" class="form-control" placeholder="输入验证码">
+                            <img src="../../images/fyk/getCode.jpg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal phone -->
+        <div class="modal fade" id="modal_phone" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel3">更改绑定手机</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body phone-modal-body">
+                        <h6>为确认身份，我们仍需验证您的安全手机</h6>
+                        <p class="text-phone">
+                            点击发送短信按钮，将会发送一条有验证码的短信至手机 <span id="">182******90</span>
+                        </p>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">发送短信</button>
+                        <p><span>无法通过？点击换用其他验证方式</span></p>
+                    </div>
+                    <!--                   <div class="modal-footer">-->
+                    <!--                       <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+                    <!--                   </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--中间部分（完）-->
+<!--页脚-->
+<% include ../common/footer.ejs %>
+<!--页脚（完）-->
+
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<% include ../common/common_scripts.ejs %>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>个人资料</title>
+    <% include ../common/common_links.ejs %>
+    <!--this page-->
+    <link rel="stylesheet" href="../../css/personal-center/FYK/editinfo.css">
+</head>
+<body>
+<!--导航部分-->
+<header>
+    <% include ../common/nav.ejs %>
+</header>
+<!--导航（完）-->
+<!--中间部分-->
+<section class="container middle-content" id="personal_center">
+    <div class="row">
+        <div class="col-lg-2">
+            <nav>
+                <h4 class="navH4">个人中心</h4>
+                <ul class="navUl">
+                    <li><a href="../CH/vip.html">会员中心</a></li>
+                    <li><a href="../FYK/me.html">我的资料</a></li>
+                    <li><a href="../FYK/editinfo.html" class="borderBottom">修改资料</a></li>
+                    <li><a href="../FYK/account.html">账户安全</a></li>
+                    <li><a href="../FYK/address.html">收货地址</a></li>
+                </ul>
+                <h4 class="navH4">我的订单</h4>
+                <ul class="navUl">
+                    <li><a href="../CH/Orders.html">所有订单</a></li>
+                    <li><a href="../CH/Not%20paying.html">待付款</a></li>
+                    <li><a href="../CH/Payment%20has%20been.html">待收货</a></li>
+                    <li><a href="../CH/completed.html">已完成</a></li>
+                    <li><a href="../FYK/messages.html">我的收藏</a></li>
+                    <li><a href="../CH/show%20oders.html">我的晒单</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-10 personal_center_content">
+            <div class="content">
+                <h3>我的资料</h3>
+                <hr>
+                <section class="information">
+                    <div class="person-photo">
+                        <img class="head-img" src="
+                        <% if( userData[0].user_icon_path !== null){ %>
+                            <%= userData[0].user_icon_path %>
+                        <% } else { %>
+                            ../../images/fyk/head_photo.jpg
+                        <% } %>" alt="头像"/>
+                        <span class="text-modal" id="changeHeadImg" data-toggle="modal"
+                              data-target="#myPhoto">更改头像</span>
+                    </div>
+                    <div class="username" id="username">
+                        <label class=""><span class="color-red">*</span>用户名：</label>
+                        <span><%= userDate[0].user_account_name %></span>
+                    </div>
+                    <div class="nickname" id="nickname">
+                        <label class=""><span class="color-red">*</span>昵称：</label>
+                        <input type="text" class="form-input" value="<%= userDate[0].user_nickname %>">
+                    </div>
+                    <div class="user-sex" id="user-sex">
+                        <label>性别：</label>
+                        <input type="radio" name="sex">男
+                        <input type="radio" name="sex">女
+                        <input type="radio" name="sex" checked>保密
+                    </div>
+                    <div class="user-birthday" id="user-birthday">
+                        <label>生日：</label>
+                        <select id="J_Year" class="form-input" name=""></select>
+                        <select id="J_Month" class="form-input" name=""></select>
+                        <select id="J_Date" class="form-input" name=""></select>
+                    </div>
+                    <div class="user-Eamil">
+                        <label>邮箱：</label>
+                        <span>1763612897@qq.com</span>
+                        <span class="text-modal" id="changeEmail"><a href="../FYK/account.html">更改邮箱</a></span>
+                    </div>
+                    <div class="btn">
+                        <button type="button" class="btn btn-default">保存</button>
+                        <button type="button" class="btn btn-default">取消</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myPhoto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">修改头像</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body photo-modal-body">
+                    <h6>请上传图片：</h6>
+                    <input type="file" id="choose_file">
+                    <button class="file-btn form-control" id="file_btn">上传图片</button>
+                    <p>jpg 或 png，大小不超过1M</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--中间部分（完）-->
+<!--页脚-->
+<% include ../common/footer.ejs %>
+<!--页脚（完）-->
+
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<% include ../common/common_scripts.ejs %>
+
+<script>
+    // 生成生日的年月日
+    function dateSelect() {
+        let year, month, date;
+        for (let i = 1940; i <= 2019; i++) {
+            $("#J_Year").append("<option value=\"" + i + "\"  >" + i + "</option>");
+            year = i;
+        }
+        for (let i = 1; i <= 12; i++) {
+            $("#J_Month").append("<option value=\"" + i + "\"  >" + i + "</option>");
+            month = i;
+        }
+        for (let i = 1; i <= 31; i++) {
+            $("#J_Date").append("<option value=\"" + i + "\"  >" + i + "</option>");
+            date = i;
+        }
+    }
+
+    dateSelect();
+
+    $(document).ready(() => {
+        $("#file_btn").click(() => {
+            $("#choose_file").click();
+        })
+    });
+</script>
+</body>
+</html>

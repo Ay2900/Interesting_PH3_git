@@ -71,7 +71,7 @@
                                         <span id="set_default_address">设置为默认地址</span>
                                     <% } %>
                                     <span data-toggle="modal" data-target="#myAddress">修改</span>
-                                    <span>删除</span>
+                                    <span><a href="/deleteAddress.do?id=<%= addressData[i].addr_id %>>">删除</a></span>
                                 </div>
                             </div>
                         </div>
@@ -143,7 +143,9 @@
 <script src="../../../node_modules/distpicker/dist/distpicker.min.js"></script>
 
 <script>
-    console.log(<%= addressData[0].addr_is_default==true%>);
+    console.log(<%= addressData[0].addr_is_default == true %>);
+
+
 </script>
 </body>
 </html>
