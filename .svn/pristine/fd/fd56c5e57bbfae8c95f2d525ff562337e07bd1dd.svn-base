@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%include ../common/meta.ejs%>
+    <title>stylist</title>
+<!--    <link rel="stylesheet" href="../../public/css/nav-footer/nav.css">-->
+<!--    <link rel="stylesheet" href="../../public/fonts/header_footer/iconfont.css">-->
+<!--    <link rel="stylesheet" href="../../public/frame/custom-bootstrap/custom-bootstrap.css">-->
+<!--    <link rel="stylesheet" href="../../public/frame/font-awesome-4.7.0/css/font-awesome.css">-->
+    <%include ../common/common_links.ejs%>
+    <link rel="stylesheet/less" href="../../css/about-brand/ZYS/stylist.less">
+</head>
+<body>
+<%include ../common/nav.ejs%>
+<section class="row"><!--banner开始-->
+    <div class="afflatus-Banner container-fluid ">
+        <h2 class="afflatus-Banner-Font">27国100+大师 正版签名设计</h2>
+    </div>
+</section><!--banner结束-->
+<section><!--页面导航nav开始-->
+    <nav>
+        <ul class="nav-pages">
+            <li class="float-stylist">
+                <a href="#">
+                    精选晒单
+                    <span class="nav-Span1 myNav">NEW</span>
+                </a>
+            </li>
+            <li class="float-stylist">
+                <a href="../../public/pages/ZYS/afflatus.html">
+                    灵感
+                    <span class="nav-Span2 myNav">6</span>
+                </a>
+            </li>
+            <li class="float-stylist">
+                <a href="../../public/pages/ZYS/trademark.html">
+                    品牌
+                    <span class="nav-Span2 myNav">4</span>
+                </a>
+            </li>
+            <li class="float-stylist">
+                <a href="../../public/pages/ZYS/album.html">
+                    专辑
+                    <span class="nav-Span2 myNav">2</span>
+                </a>
+            </li>
+            <li class="float-stylist">
+                <a href="../../public/pages/ZYS/stylist.html">
+                    设计师
+                    <span class="nav-Span2 myNav">20</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <hr>
+</section><!--页面导航nav结束-->
+<section><!--图片开始-->
+    <div class="container"><!--第一行开始-->
+        <div class="row First">
+            <div class="col-md-6">
+                <%for(var i=0;i<list.length;i++){%>
+                <a href="../../public/pages/ZYS/stylist-1.html" target="_blank">
+<!--                    <img src="../../public/images/ZYS/stylist/Middle/stylist-1.jpg"  alt="设计师图片">-->
+                    <img src="<%=list[i].designer_main_pic_path%>"  alt="设计师图片">
+                    <h5 class="img-H5">榆杨设计师｜<%=list[i].designer_hold_place%>｜<%=list[i].designer_name%></h5>
+                </a>
+                <p class="img-P"><%=list[i].designer_motto%></p>
+                    <%}%>
+            </div>
+        </div>
+    </div>
+</section><!--图片结束-->
+<script src="../../public/frame/less.min.js"></script>
+<%include ../common/footer.ejs%>
+<%include ../common/common_scripts.ejs%>
+</body>
+</html>

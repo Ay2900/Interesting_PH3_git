@@ -1,0 +1,12 @@
+const express = require("express");
+const personCenter_controller = require("../controller/personCenter_controller");
+
+const  router = express.Router();//调用express对象提供的路由方法获取路由对象
+
+
+router.get("/me",function (request,response) {
+    console.log(1111);
+    response.render("FYK/me");
+});
+
+module.exports=router;

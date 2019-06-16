@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, init ial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../public/frame/custom-bootstrap/custom-bootstrap.css">
+    <link rel="stylesheet/less" href="../../public/css/personal-center/personal_center_nav.less">
+</head>
+<body>
+<ul class="side_outer_ul">
+    <li class="h5"><a href="">会员中心</a></li>
+    <li class="h5">我的订单
+        <ul class="personal_inner_ul">
+            <li class=" "> <a href="个人中心-未付款订单.html">待付款</a></li>
+            <li class=""><a href="个人中心-已付款订单.html">待发货</a></li>
+            <li class=""><a href="个人中心-已完成订单.html">已完成</a></li>
+        </ul>
+    </li>
+    <li class="h5"><a href="个人中心-我的晒单.html">我的晒单</a></li>
+    <li class="h6 active"><span>个人资料</span></li>
+    <li class="h5"><a href="个人中心-我的收藏.html">我的收藏</a></li>
+</ul>
+<script src="../../public/frame/less.min.js"></script>
+<script src="../../public/frame/jquery-3.4.1.min.js"></script>
+<script src="../../public/frame/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
