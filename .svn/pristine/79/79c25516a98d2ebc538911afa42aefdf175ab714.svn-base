@@ -1,0 +1,76 @@
+const express = require("express");
+const app = express();
+const logger = require("morgan");
+const favicon=require("serve-favicon");
+const router = require("./routes/formroutes");
+
+const personal_center_router=require('./routes/personal_center_route');
+const bodyParser = require("body-parser");
+const path = require("path");
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
+
+app.use(logger("dev"));
+app.use(favicon(__dirname+"/public/images/favicon.ico"));
+app.use(cookieParser());
+app.use(session({
+    name: "zaonie",//cookie名称
+    secret: "123123123",//秘钥
+    cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},//cookie有效时间，毫秒为单位
+    resave: true,//更新session-cookie失效时间
+    rolling: true,//更新保存，按照原设定的maxAge重新设置session 同步到cookie
+    saveUninitialized: true  //未初始化cookie是否需要保存
+}));
+//配置POST bodyParser
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+// 配置通用拦截，防止未登录情况下进入其他网页
+// app.use("/", (req, resp, next) => {
+//     req.headers.referer = req.headers.referer || "";
+//     if (req.session.username || req.path == "/login.html" || req.headers.referer.match(/login.html$/) || req.path == "/login2.html" || req.headers.referer.match(/login2.html$/) || req.path == "/pwd.html" || req.headers.referer.match(/pwd.html$/) || req.path == "/success.html" || req.headers.referer.match(/success.html$/) || req.path == "/reg.html" || req.headers.referer.match(/reg.html$/)) {
+//         next();
+//
+//     } else {
+//         req.session.preUrl = req.url;
+//         resp.redirect("/login.html")
+//     }
+// });
+//配置EJS
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+// app.use("/",(req,resp,next)=>{
+//     // console.log("通用拦截"+req.session.username);
+//     // console.log(req.path);//localhost:8888/login.do?id=1
+//     //console.log(req.url);//localhost:8888/login.do?id=1
+//
+//     // console.log(req.headers.referer);//包含请求来源
+//     req.headers.referer=req.headers.referer||"";
+//     if(req.session.username||req.path=="/login.html"||req.headers.referer.match(/login.html$/)){
+//         next();
+//     }else{
+//         req.session.preUrl=req.url;
+//         resp.redirect("/login.html")//localhose:8888/login2.html
+//     }
+// });
+//主路由配置
+app.use(router);
+//配置和个人中心路由
+app.use(personal_center_router);
+//静态资源配置
+app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public/html"));
+//跳转404页面
+app.use((req, resp) => {
+    resp.redirect("404.html");
+    resp.status(404);
+});
+
+
+
+
+app.set("port", 8989);
+app.listen(8989, () => {
+    console.log("服务启动" + app.get("port"));
+
+});

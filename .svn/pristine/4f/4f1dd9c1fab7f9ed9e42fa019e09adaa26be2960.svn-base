@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <% include meta.ejs%>
+    <title>这里填写Title</title>
+    <% include common_links.ejs%>
+    <!--这里引用自己的css-->
+</head>
+<body>
+<% include nav.ejs%>
+<!--这里编写主内容-->
+<% include footer.ejs%>
+<% include common_scripts.ejs%>
+<!--这里引用自己的js-->
+</body>
+</html>

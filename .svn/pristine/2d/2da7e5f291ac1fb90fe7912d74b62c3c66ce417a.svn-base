@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .shitidian, .learn, .shangye {
+        display: none;
+    }
+}
+
+.nav.navbar-nav.navLi.navbar-left > li > a:hover {
+    border-bottom: 1px solid white;
+}
+
+.iconfont.icon-yonghu,
+.iconfont.icon-gouwuche {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+    .nav.navbar-nav.navbar-right.navLi .shitidian,
+    .nav.navbar-nav.navbar-right.navLi .learn,
+    .nav.navbar-nav.navbar-right.navLi .shangye {
+        display: none;
+    }
+}
+
+.navbar.navbar-default.navColor {
+    background: #313131;
+    color: #dadada;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.dropdown-menu.navSon > li > a {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.dropdown-menu.navSon {
+    padding-bottom: 20px;
+}
+
+.nav.navbar-nav.navLi > li > a,
+.nav.navbar-nav.navbar-right.navLi > li > a,
+.dropdown-menu.navSon > li > a {
+    color: #dadada;
+}
+
+.nav.navbar-nav.navLi > li > a:hover {
+    color: white;
+}
+
+
+.dropdown-menu.navSon {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    position: absolute;
+    border: 0;
+    border-radius: 0;
+    /*color:#dadada;*/
+}
+
+.dropdown-menu.navSon.one {
+    left: -8.3vw;
+    padding-left: 25vw;
+}
+
+.dropdown-menu.navSon.two {
+    left: -12.55vw;
+    padding-left: 15vw;
+}
+
+.dropdown-menu.navSon.three {
+    left: -18.2vw;
+    padding-left: 8vw;
+}
+
+.dropdown-menu.navSon.four {
+    left: -22.4vw;
+    padding-left: 30vw;
+}
+
+.dropdown-menu.navSon.five {
+    left: -26.7vw;
+    padding-left: 30vw;
+}
+
+.dropdown-menu.navSon.six {
+    left: -30.9vw;
+    padding-left: 30vw;
+}
+
+.dropdown-menu.navSon.seven {
+    left: -35.15vw;
+    padding-left: 15vw;
+}
+
+.dropdown-menu.navSon.eight {
+    left: -39.4vw;
+    padding-left: 25vw;
+}
+
+.dropdown-menu.navSon.nine {
+    left: -43.65vw;
+    padding-left: 30vw;
+}
+
+.dropdown-menu.navSon.ten {
+    left: -47.9vw;
+    padding-left: 18vw;
+}
+
+
+.dropdown-menu.navSon > li {
+    text-align: center;
+    float: left;
+}
+
+.dropdown-menu.navSon > li > a:hover {
+    background: none;
+}
+
+.productDisplay {
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+}
+
+.dropdown:hover {
+    /*border-bottom: 1px solid white;*/
+}
+
+.dropdown:hover .dropdown-menu.navSon {
+    display: inline-block;
+}
+
+.dropdown-menu.navSon > li:hover .h6 {
+    color: white;
+}
+
+/*页脚*/
+.navbar.navbar-default.navColor.footer {
+    margin-top: 50px;
+}
+
+.row.text-center.underLine {
+    border-bottom: 1px solid #dadada;
+    margin: 80px 0 50px 0;
+    padding-bottom: 20px;
+}
+
+.row.text-center.nf-copyright {
+    padding-bottom: 50px;
+}
+
+.col-md-6.border {
+    border-right: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+}
+
+.col-md-6.border .col-lg-4 {
+    padding: 0;
+}
+
+.aFirst {
+    color: grey;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #dadada;
+    font-size: 13px;
+}
+
+footer li {
+    list-style: none;
+    line-height: 36px;
+    font-size: 13px;
+}
+
+footer li a {
+    color: #dadada;
+}
+
+.col-md-3.text-left.first p {
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+
+.iconFooter > a > span {
+    font-size: 30px;
+    color: white;
+}
+
+.col-md-3.text-left.three .h6 {
+    color: grey;
+}
+
+.col-md-3.text-left.three .h4 {
+    font-size: 20px;
+    color: white;
+}
+
+.onlineKe {
+    display: inline-block;
+    border: 1px solid white;
+    width: 82px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    border-radius: 30px;
+}
+
+.dian {
+    margin-top: 50px;
+    display: inline-block;
+    border: 1px solid white;
+    width: 280px;
+    height: 42px;
+    line-height: 42px;
+    color: black;
+    background-color: #fff;
+}
+
+.carFather {
+    position: relative;
+}
+
+#carAlert {
+    margin-top: 1px;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 50px;
+    left: -270px;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: #ffffff;
+}
+
+#carAlert:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 6px;
+    top: -8px;
+    z-index: 2;
+    border-left: transparent 8px solid;
+    border-right: transparent 8px solid;
+    border-bottom: #fff 8px solid;
+}
+
+#carAlert img {
+    width: 100px;
+    height: 100px;
+}
+
+#carAlert p{
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+    line-height: 24px;
+}
+
+#carAlert .col-lg-9{
+    margin-top: 30px;
+}
+
+#carAlert .col-lg-3{
+    color: black;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#carAlert .one {
+    color: black;
+}
+
+#carAlert .two {
+    color: #c0c0c0;
+}
+
+#carAlert .three {
+    color: #d57372;
+}
+
+#carAlert a{
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    background-color: black;
+    color: white;
+    margin-left: 28px;
+}
+
+#carAlert{
+    display: none;
+    overflow: hidden;
+}

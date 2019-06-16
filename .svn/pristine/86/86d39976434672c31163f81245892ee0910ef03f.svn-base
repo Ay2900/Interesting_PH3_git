@@ -1,0 +1,26 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "latest",
+    "distpicker": "^2.0.5",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "express-g": "^1.0.9",
+    "express-session": "^1.16.1",
+    "leancloud-storage": "^3.13.2",
+    "morgan": "^1.9.1",
+    "mysql": "^2.17.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "cookie-parser": "^1.4.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

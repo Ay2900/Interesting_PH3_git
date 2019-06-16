@@ -1,0 +1,65 @@
+const shopping_car_item = $('.shopping_car_item');
+const car_footer = $('.car_footer');
+var priceArray = [];
+$(function () {
+    shopping_car_item.on('click', '.car_del', (e) => {
+        let del = e.target;
+        $(del).parents('.shopping_car_item').slideUp(500);
+        setTimeout(function () {
+            $(del).parents('.shopping_car_item').remove();
+        }, 500);
+    });
+    shopping_car_item.on('click', '.num_control:nth-of-type(1)', (e) => {
+        let prevNum = parseInt($(e.target).parents(".col-xs-2").children('.num_control:nth-child(2)').html());
+        $(e.target).parents(".col-xs-2").children('.num_control:nth-child(2)').html(function () {
+            if (prevNum) {
+                return prevNum - 1;
+            }
+        });
+        moneyCount();
+    });
+    shopping_car_item.on('click', '.num_control:nth-of-type(3)', (e) => {
+        let prevNum = parseInt($(e.target).parents(".col-xs-2").children('.num_control:nth-child(2)').html());
+        $(e.target).parents(".col-xs-2").children('.num_control:nth-child(2)').html(function () {
+            return prevNum + 1;
+        });
+        moneyCount();
+    });
+    $('.item_checkbox').on('change', function () {
+        $("#check_num").html(function () {
+            if ($(':checked:not(.footer_check)').length === $('.item_checkbox').length) {
+                $('.footer_check').prop('checked', true);
+            } else {
+                $('.footer_check').prop('checked', false);
+            }
+            return $(':checked:not(.footer_check)').length;
+        });
+        moneyCount();
+    });
+    $('.footer_check').on('change', function () {
+        if ($(this).prop('checked')) {
+            $('.item_checkbox').prop('checked', true);
+        } else {
+            $('.item_checkbox').prop('checked', false);
+        }
+    });
+});
+
+function moneyCount() {
+    priceArray = [];
+    $('#count_price').html(function () {
+        $(':checked:not(.footer_check)').each(function (i, n) {
+            let num = parseInt($(n).parents('.shopping_car_item').find('.num_control:nth-of-type(2)').html());
+            let price = parseFloat($(n).parents('.shopping_car_item').find('.single_price').html());
+            priceArray.push(num * price);
+            if (i === $(':checked:not(.footer_check)').length - 1) {
+                let total = 0;
+                $(priceArray).each((i, n) => {
+                    total += n;
+                });
+                $("#count_price").html(total);
+                $("#pay_price").html(total);
+            }
+        })
+    })
+}

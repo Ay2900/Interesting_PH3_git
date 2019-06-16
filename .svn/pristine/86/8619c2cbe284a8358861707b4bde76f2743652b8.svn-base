@@ -1,0 +1,99 @@
+const express = require("express");
+const app = express();
+const logger = require("morgan");
+const favicon=require("serve-favicon");
+
+// 路由
+const formroutes = require("./routes/formroutes");
+// const CommodityRouting = require("./routes/CommodityRouting");
+// const test=require('./routes/test');
+const shopping_router=require('./routes/shopping_router');
+// const stylist_route=require('./routes/stylist_route');
+const order=require('./routes/order');
+// const personCenter_router=require('./routes/personCenter_router');
+// const index_route=('./routes/index_route');
+
+// 路由
+const bodyParser = require("body-parser");
+const path = require("path");
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
+
+// app.use(logger("dev"));
+app.use(favicon(__dirname+"/public/images/favicon.ico"));
+app.use(cookieParser());
+app.use(session({
+    name: "Yuyang",//cookie名称
+    secret: "123123123",//秘钥
+    cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},//cookie有效时间，毫秒为单位
+    resave: true,//更新session-cookie失效时间
+    rolling: true,//更新保存，按照原设定的maxAge重新设置session 同步到cookie
+    saveUninitialized: true  //未初始化cookie是否需要保存
+}));
+//配置POST bodyParser
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+//配置EJS
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+//静态资源配置
+app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public/html"));
+// app.use(express.static(__dirname + "/public/pages"));
+// app.use(express.static(__dirname + "/public/pages/CH"));
+// app.use(express.static(__dirname + "/public/pages/FYK"));
+// app.use(express.static(__dirname + "/public/pages/LJC"));
+// app.use(express.static(__dirname + "/public/pages/TX"));
+// app.use(express.static(__dirname + "/public/pages/TYH"));
+// app.use(express.static(__dirname + "/public/pages/XY"));
+// app.use(express.static(__dirname + "/public/pages/ZYS"));
+
+
+
+// 配置通用拦截，防止未登录情况下进入其他网页
+app.use("/", (req, resp, next) => {
+    req.headers.referer = req.headers.referer || "";
+    if (req.session.username
+    || req.path == "/login.html" || req.headers.referer.match(/login.html$/)
+    // || req.path == "/login2.html" || req.headers.referer.match(/login2.html$/)
+    // || req.path == "/pwd.html" || req.headers.referer.match(/pwd.html$/)
+    // || req.path == "/success.html" || req.headers.referer.match(/success.html$/)
+    // || req.path == "/reg.html" || req.headers.referer.match(/reg.html$/))
+    )
+
+    {
+        next();
+
+    } else {
+        req.session.preUrl = req.url;
+        resp.redirect("/login.html")
+    }
+});
+
+
+
+//主路由配置
+// app.use(CommodityRouting);
+app.use(order);
+app.use(formroutes);
+// app.use(stylist_route);
+app.use(shopping_router);
+// app.use(personCenter_router);
+// app.use(index_route);
+// 测试路由
+// app.use(test);
+//跳转404页面
+app.use((req, resp) => {
+    resp.redirect("404.html");
+    resp.status(404);
+});
+
+
+
+
+app.set("port", 8989);
+app.listen(8989, () => {
+    console.log("服务启动" + app.get("port"));
+
+});

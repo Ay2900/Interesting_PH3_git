@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, init ial-scale=1">
+    <title>login</title>
+    <link rel="stylesheet" href="../../css/login/login2.css">
+    <link rel="stylesheet" href="../../frame/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/nav-footer/nav.css">
+    <link rel="stylesheet" href="../../fonts/header_footer/iconfont.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--导航部分-->
+<nav class="navbar navbar-default navColor navbar-fixed-top">
+    <!--主要内容-->
+    <div class="container-fluid">
+        <!--logo部分-->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index.html">
+                <!--                Logo图片-->
+                <img src="../../images/logo.png" alt="logo" height="30">
+            </a>
+        </div>
+        <!--导航列表部分-->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <!--列表左-->
+            <ul class="nav navbar-nav navLi navbar-left">
+                <li><a href="../../index.html">首页</a></li>
+                <!--沙发-->
+                <li class="dropdown">
+                    <a href="../XY/productList.html" class="dropdown-toggle" role="button" aria-haspopup="true"
+                       aria-expanded="false">沙发</a>
+                    <!--子菜单-->
+                    <ul class="dropdown-menu navSon one">
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/all.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">全部</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/sofa/sofa3.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">三人沙发</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/sofa/sofa2.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">双人沙发</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/sofa/sofa1.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">单人沙发</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/sofa/bigsofa3.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">大三人沙发</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/sofa/sofadun.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">沙发墩</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--床·床具-->
+                <li class="dropdown">
+                    <a href="../XY/productList.html" class="dropdown-toggle" role="button" aria-haspopup="true"
+                       aria-expanded="false">床·床具</a>
+                    <!--子菜单-->
+                    <ul class="dropdown-menu navSon two">
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/all.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">全部</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/chuang/1.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">床</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/chuang/2.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">床垫</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/chuang/3.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">床品4件套</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/chuang/4.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">被芯</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/chuang/5.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">枕芯</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/chuang/6.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">床头柜</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/chuang/7.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">床下储物盒</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/chuang/8.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">床尾凳</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--柜架-->
+                <li class="dropdown">
+                    <a href="../XY/productList.html" class="dropdown-toggle" role="button" aria-haspopup="true"
+                       aria-expanded="false">柜架</a>
+                    <!--子菜单-->
+                    <ul class="dropdown-menu navSon three">
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/all.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">全部</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/kuang/1.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">COSMO</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/kuang/2.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">置物柜</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/kuang/3.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">书柜·书架</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/kuang/4.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">电视柜</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/kuang/5.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">置物架</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/kuang/6.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">衣柜</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/kuang/7.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">床头柜</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/kuang/8.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">衣帽架</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/kuang/9.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">鞋柜·玄关柜</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/kuang/10.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">单元格</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--椅凳-->
+                <li class="dropdown">
+                    <a href="../XY/productList.html" class="dropdown-toggle" role="button" aria-haspopup="true"
+                       aria-expanded="false">椅凳</a>
+                    <!--子菜单-->
+                    <ul class="dropdown-menu navSon four">
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/all.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">全部</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/yi/1.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">座椅</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/yi/2.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">坐墩</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/yi/3.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">休闲椅</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/yi/4.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">凳子</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--桌几-->
+                <li class="dropdown">
+                    <a href="../XY/productList.html" class="dropdown-toggle" role="button" aria-haspopup="true"
+                       aria-expanded="false">桌几</a>
+                    <!--子菜单-->
+                    <ul class="dropdown-menu navSon five">
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/all.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">全部</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/zhuo/1.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">书桌·餐桌</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/zhuo/2.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">茶几</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/zhuo/3.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">边几</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/zhuo/4.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">梳妆台</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--灯具-->
+                <li class="dropdown">
+                    <a href="../XY/productList.html" class="dropdown-toggle" role="button" aria-haspopup="true"
+                       aria-expanded="false">灯具</a>
+                    <!--子菜单-->
+                    <ul class="dropdown-menu navSon six">
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/all.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">全部</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/deng/1.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">台灯</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/deng/2.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">地灯</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/deng/3.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">吊灯</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/deng/4.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">夜灯</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--家纺-->
+                <li class="dropdown">
+                    <a href="../XY/productList.html" class="dropdown-toggle" role="button" aria-haspopup="true"
+                       aria-expanded="false">家纺</a>
+                    <!--子菜单-->
+                    <ul class="dropdown-menu navSon seven">
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/all.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">全部</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/jia/1.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">床品4件套</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/jia/2.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">被芯</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/jia/3.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">枕芯</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/jia/4.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">床褥</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/jia/5.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">盖毯·围巾</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/jia/6.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">地毯</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/jia/7.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">抱枕·颈枕</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/jia/8.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">毛巾·浴巾</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/jia/9.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">收纳</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--餐具-->
+                <li class="dropdown">
+                    <a href="../XY/productList.html" class="dropdown-toggle" role="button" aria-haspopup="true"
+                       aria-expanded="false">餐具</a>
+                    <!--子菜单-->
+                    <ul class="dropdown-menu navSon eight">
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/all.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">全部</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/canju/1.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">套装</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/canju/2.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">盘碗</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/canju/3.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">杯子</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/canju/4.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">储物</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/canju/5.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">托盘</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--装饰-->
+                <li class="dropdown">
+                    <a href="../XY/productList.html" class="dropdown-toggle" role="button" aria-haspopup="true"
+                       aria-expanded="false">装饰</a>
+                    <!--子菜单-->
+                    <ul class="dropdown-menu navSon nine">
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/all.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">全部</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/zhuang/1.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">摆件·花瓶</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/zhuang/2.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">收纳</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/zhuang/3.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">墙镜</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/zhuang/4.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">装饰画</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--系列-->
+                <li class="dropdown">
+                    <a href="../XY/productList.html" class="dropdown-toggle" role="button" aria-haspopup="true"
+                       aria-expanded="false">系列</a>
+                    <!--子菜单-->
+                    <ul class="dropdown-menu navSon ten">
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/all.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">全部</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/xilie/1.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">美术馆系列</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/xilie/2.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">COSMO系列</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/xilie/3.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">画板系列</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/xilie/4.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">山雪系列</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/xilie/5.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">青山系列</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/xilie/6.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">贡多拉系列</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../XY/productList.html">
+                                <img src="../../images/header/xilie/7.png" alt="" class="productDisplay">
+                                <br>
+                                <span class="h6">朱雀系列</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!--列表右-->
+            <ul class="nav navbar-nav navbar-right navLi">
+                <li><a href="#"  class="shitidian">
+                    <span class="iconfont icon-dingwei"></span>
+                    实体店
+                </a></li>
+                <li><a href="#" class="learn">了解造作</a></li>
+                <li><a href="#" class="shangye">商业合作</a></li>
+                <li><a class="navbar-brand" href="../FYK/user/me.html">
+                    <span class="iconfont icon-yonghu"></span>
+                </a></li>
+                <li class="carFather">
+                    <a class="navbar-brand" href="../TYH/shopping_car.html">
+                        <span class="iconfont icon-gouwuche"></span>
+                    </a>
+                    <div id="carAlert">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <img src="../../images/lie1%20shafa/91f3d4ae75e0d650c613c25b12f0c86b@!small.jpg" alt="">
+                                </div>
+                                <div class="col-lg-2" >
+                                    <div class="col-lg-9">
+                                        <p class="one">画板床</p>
+                                        <p class="two">1.5米款黑色</p>
+                                        <p class="three">￥1999</p></div>
+                                    <div class="col-lg-3">
+                                        ×1
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 text-center">
+                                    <a href="">结算</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!--导航（完）-->
+<section class="dlk container-fluid">
+    <div class="row col-lg-4 col-lg-offset-4 text-center" >
+    <div class="lgk col-lg-10  col-lg-offset-1 ">
+        <div class="row"><img src="../../images/logo.png" alt="" class="lgtp  img-responsive  "></div>
+        <div class="row text-center"><h1 class="lgbt   col-lg-12 " style="font-size: 27px">手机登录</h1></div>
+        <div class="sjh row">
+            <input type="text" class="qh" placeholder="+86" disabled>
+            <input type="text" class="lgsjh" id="phone" placeholder="&nbsp;&nbsp;手机号码">
+        </div>
+        <div class="dxyzm row">
+            <input type="text" class="yzm" id="code" placeholder="&nbsp;&nbsp;短信验证码">
+            <button class="hqyzm" onclick="sendCode()">获取验证码</button>
+            <br>
+            <span id="sendMsg"></span>
+        </div>
+
+        <div class="row"><button class="lgbtn " onclick="verifyCode()">登录</button></div>
+        <div class="row">
+            <a href="../../login.html" class="lgsj  ">账号密码电脑登录</a>
+        </div>
+    </div></div>
+
+
+</section>
+<script src="../../frame/jquery-3.4.1.min.js"></script>
+<script src="../../frame/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script>
+    function sendCode() {
+        $.ajax({
+            url:"/sendCode.do",
+            type:"post",
+            data:{
+                phone:$("#phone").val()
+            },
+            success:function (data) {
+                $("#sendMsg").html(data);
+
+            }
+        })
+
+    }
+    function verifyCode() {
+        $.ajax({
+            url:"/verifyCode.do",
+            type:"post",
+            data:{
+                phone:$("#phone").val(),
+                code:$("#code").val()
+            },
+            success:function (data) {
+                    location.href="http://www.baidu.com";
+//                $("#verifyMsg").html(data);
+            }
+
+        })
+
+
+    }
+</script>
+</body>
+</html>

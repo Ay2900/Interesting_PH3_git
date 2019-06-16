@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <%include ../common/meta.ejs%>
+    <title>所有订单</title>
+    <% include ../common/common_links.ejs%>
+    <link rel="stylesheet" href="./css/personal-center/CH/Orders.css">
+</head>
+<body>
+<div class="modal fade" tabindex="-1" role="dialog" id="mymodal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">待收货</h4>
+            </div>
+            <div class="modal-body">
+                <p>确认是否收货？</p>
+                <!--<div class="form-group">-->
+                <!--<label for="username">用户名</label>-->
+                <!--<input type="text" id="username" class="form-control" autofocus>-->
+                <!--</div>-->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">是</button>
+                <button type="button" class="btn btn-default ">否</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" id="myAddress" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true" >&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel" >编辑维修信息</h4>
+
+            </div>
+            <div class="modal-body address-modal">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="username">姓名：</span>
+                            <input type="text" class="form-control" placeholder="收货人姓名"
+                                   aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="phone">手机：</span>
+                            <input type="text" class="form-control" placeholder="收货人手机号"
+                                   aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <h5>收货地址：</h5>
+                <div class="row address-select" id="target" data-toggle="distpicker"><!-- container -->
+                    <label for="" >
+                        <select  name="" id="sheng" data-province="---- 请选择省 ----"></select><!-- 省 -->
+                    </label>
+                    <label for="" >
+                        <select name="" id="shi" data-city="---- 请选择市 ----"></select><!-- 市 -->
+                    </label>
+                    <label for="" >
+                        <select name="" id="qu" data-district="---- 请选择区 ----"></select><!-- 区 -->
+                    </label>
+                </div>
+                <div class="address-input">
+                    <input type="text" class="form-control" id="detailed_address" placeholder="详细地址">
+                </div>
+            </div>
+            <div>
+                <p class="iptP">填写维修原因：</p>
+                <textarea name="" id="" cols="121" rows="3" class="iptP"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确认维修</button>
+                <button type="button" class="btn btn-default">申请退货</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myAddress1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel1">编辑退货信息</h4>
+
+            </div>
+            <div class="modal-body address-modal">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="username1">姓名：</span>
+                            <input type="text" class="form-control" placeholder="收货人姓名"
+                                   aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="phone1">手机：</span>
+                            <input type="text" class="form-control" placeholder="收货人手机号"
+                                   aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <h5>收货地址：</h5>
+                <div class="row address-select" id="target1" data-toggle="distpicker"><!-- container -->
+                    <label for="" >
+                        <select  name="" id="sheng1" data-province="---- 请选择省 ----"></select><!-- 省 -->
+                    </label>
+                    <label for="" >
+                        <select name="" id="shi1" data-city="---- 请选择市 ----"></select><!-- 市 -->
+                    </label>
+                    <label for="" >
+                        <select name="" id="qu1" data-district="---- 请选择区 ----"></select><!-- 区 -->
+                    </label>
+                </div>
+                <div class="address-input">
+                    <input type="text" class="form-control" id="detailed_address1" placeholder="详细地址">
+                </div>
+            </div>
+            <div>
+                <p class="iptP">填写退货原因：</p>
+                <label for="" class="iptP">
+                    <select name="" >
+                        <option value="">--请选择--</option>
+                    </select>
+
+                </label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确认退货</button>
+                <button type="button" class="btn btn-default">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ../common/nav.ejs%>
+
+<!--这里编写主内容-->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                <nav>
+                    <h4>个人中心</h4>
+                    <ul class="navUl" >
+                        <li><a href="../../public/pages/CH/vip.html">会员中心</a></li>
+                        <li><a href="../../public/pages/FYK/me.html" >我的资料</a></li>
+                        <li><a href="../../public/pages/FYK/editinfo.html" >修改资料</a></li>
+                        <li><a href="../../public/pages/FYK/account.html">账户安全</a></li>
+                        <li><a href="../../public/pages/FYK/address.html">收货地址</a></li>
+                    </ul>
+
+                    <h4 class="navH4">我的订单</h4>
+                    <ul class="navUl">
+                        <li><a href="../../public/pages/CH/Orders.html" >所有订单</a></li>
+                        <li><a href="../../public/pages/CH/Not%20paying.html" class="borderBottom">待付款</a></li>
+                        <li><a href="../../public/pages/CH/Payment%20has%20been.html">待收货</a></li>
+                        <li><a href="../../public/pages/CH/completed.html">已完成</a></li>
+                        <li><a href="../../public/pages/FYK/messages.html">我的收藏</a></li>
+                        <li><a href="../../public/pages/CH/show%20oders.html">我的晒单</a></li>
+
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="col-lg-10">
+                <%for(var i=0;i<list.length;i++){%>
+                <div class="ordersec2">
+                    <div class="ordersec2top">
+                        <div>
+                            <span>￥<%=list[i].order_amount%></span>
+                            <p>单    号：000000000000000<%=list[i].order_id%></p>
+                            <p>收货信息：<%=list[i].addressee_name%> ／  <%=list[i].addressee_tel%>
+                                ／ <%=list[i].addr_province%> <%=list[i].addr_city%>
+                                <%=list[i].addr_district%><%=list[i].addr_detail%></p>
+                            <p>发票信息：增值税普通发票 ／  商品明细</p>
+                        </div>
+                        <div class="btn123">
+                            <a href="../../public/pages/TYH/pay.html"><button class="btn btn-primary">去付款</button></a>
+                            <span class="iconfont icon-cha font1" onclick="delShop(this)"></span>
+                        </div>
+                    </div>
+                    <div class="lineDiv1"></div>
+                    <div class="ordersec2bottom">
+                        <div class="ordersec2bottomImg" style="width: 300px"><img src="<%=list[i].SKU_pic_path%>" alt="" style="width: 100%"></div>
+                        <div class="ordersec2bottom2">
+                            <span class="ordersec2bottom2span1"><%=list[i].SKU_name%></span>
+                            <span class="ordersec2bottom2span2">米白/两把装</span><br>
+                            <!--<span class="font2"><span class="iconfont icon-shizhong"></span>预计2019-06-07前发货</span>-->
+                        </div>
+                    </div>
+                </div>
+                <%}%>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<% include ../common/footer.ejs%>
+<% include ../common/common_scripts.ejs%>
+<!--这里引用自己的js-->
+</body>
+<script>
+    // $(document).ready=function () {
+    //     getOrder()
+    // };
+    // function getOrder() {
+    //
+    // }
+</script>
+</html>

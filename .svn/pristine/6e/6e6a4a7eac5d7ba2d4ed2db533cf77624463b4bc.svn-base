@@ -1,0 +1,12 @@
+const  express=require("express");
+const router=express.Router();
+const stylisyController=require("../controller/stylistController");
+
+
+router.get('/stylist',stylisyController.stylistImg);
+
+
+
+
+
+module.exports=router;

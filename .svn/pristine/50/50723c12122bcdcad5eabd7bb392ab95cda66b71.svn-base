@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #020202;
+  text-decoration: none;
+}
+a:hover {
+  color: #020202;
+  text-decoration: none;
+}
+.afflatus-Banner {
+  background-image: url(../../../images/ZYS/trademark/trademark-1/Large/trademark-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 480px;
+}
+.banner-H4 {
+  font-weight: bold;
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+.banner-P {
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-top: 15px;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid #cecece;
+}
+img {
+  width: 100%;
+  margin-top: 20px;
+}
+.navbar img {
+  width: auto;
+  margin-top: 0;
+}
+.text-P {
+  letter-spacing: 2px;
+}
+.text-A {
+  text-decoration: underline;
+  color: #020202;
+}
+.center-P {
+  text-align: center;
+  font-weight: bold;
+}
+.choice-P {
+  font-size: 14px;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  color: gray;
+  background-color: rgba(231, 233, 233, 0.65);
+}
+/*# sourceMappingURL=trademark-1.css.map */

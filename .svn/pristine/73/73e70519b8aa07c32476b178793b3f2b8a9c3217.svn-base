@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <% include ../common/meta.ejs%>
+    <title>购物车 - 榆杨</title>
+    <% include ../common/common_links.ejs%>
+    <!--这里引用自己的css-->
+    <link rel="stylesheet/less" href="./css/shop/shopping.less">
+</head>
+<body>
+<% include ../common/nav.ejs%>
+
+<!--这里编写主内容-->
+<section id="shopping_car">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <form action="#" method="get">
+                    <div class="row car_title">
+                        <div class="col-xs-3"><h4>单品</h4></div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="row">
+                        <div class="checkbox">
+                            <%for(let i=0;i<items.length;i++){%>
+                                <div class="shopping_car_item">
+                                    <div class="col-xs-4">
+                                        <input type="checkbox" class="center-block item_checkbox" value="<%=items[i].SKU_code%>">
+                                        <a href="../XY/commodityDetails.html">
+                                            <img src='<%=items[i].SKU_pic_path%>' alt="美术馆电视柜">
+                                        </a>
+                                        <div class="item_title">
+                                            <div>
+                                                <strong><%=items[i].SKU_name%></strong><br><%=items[i].spec_option_value%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">预计 2019-06-01前发货</div>
+                                    <div class="col-xs-1">￥
+                                        <span class="single_price"><%=items[i].sell_price%></span>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <span class="num_control"><i class=" glyphicon glyphicon-minus"></i></span><!--
+                                    --><span class="num_control"><%=items[i].shopping_car_SKU_num%></span><!--
+                                    --><span class="num_control"><i class=" glyphicon glyphicon-plus"></i></span>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <a class="car_del">删除</a>
+                                    </div>
+                                </div>
+                            <%}%>
+                        </div>
+                    </div>
+                    <div class="row car_footer">
+                        <div class="col-xs-3">
+                            <input type="checkbox" class="footer_check">
+                            <span>全选</span>
+                            <span>|</span>
+                            <span>
+                                已选
+                                <span id="check_num">0</span>
+                                件
+                            </span>
+                        </div>
+                        <div class="col-xs-4 col-xs-offset-3">
+                            <div class="col-xs-6 two_line">
+                                <span>商品合计：￥
+                                    <span id="count_price">0</span>
+                                </span><br>
+                                <span>已享优惠：￥0</span>
+                            </div>
+                            <div class="col-xs-6">
+                                <strong>实付：￥
+                                    <span id="pay_price">0</span>
+                                </strong>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <a href="checkout.html" class="two_line">
+                                <a href="/go_to_checkout" class="btn btn-primary">立即下单</a>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<% include ../common/footer.ejs%>
+<% include ../common/common_scripts.ejs%>
+<!--这里引用自己的js-->
+<script src="./js/shop/shopping_car.js"></script>
+</body>
+</html>
