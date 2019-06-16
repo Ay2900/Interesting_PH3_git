@@ -20,42 +20,6 @@
                         <h4>收货地址</h4>
                         <div class="col-xs-12">
                             <div class="addr_box">
-                            <!--    <div class="addr_item addr_default checked" value="">
-                                    <p>
-                                        <span>张三</span>
-                                        <span>16283726987</span><br>
-                                        <span>福建</span>
-                                        <span>浦江</span>
-                                        <span>涵江区</span><br>
-                                        <span>这里是具体地址</span>
-                                    </p>
-                                    <div class="addr_foot">
-                                        <span class="pull-right">
-                                            <i class="fa fa-edit"></i>
-                                            &nbsp;
-                                            <i class="fa fa-trash-o"></i>
-                                            &nbsp;
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="addr_item">
-                                    <p>
-                                        <span>张三</span>
-                                        <span>16283726987</span><br>
-                                        <span>福建</span>
-                                        <span>浦江</span>
-                                        <span>涵江区</span><br>
-                                        <span>这里是具体地址</span>
-                                    </p>
-                                    <div class="addr_foot">
-                                        <span class="pull-right">
-                                            <i class="fa fa-edit"></i>
-                                            &nbsp;
-                                            <i class="fa fa-trash-o"></i>
-                                            &nbsp;
-                                        </span>
-                                    </div>
-                                </div>-->
                                 <%for(let i=0;i<addrData.length;i++){%>
                                 <% let defaultClass='' %>
                                 <% if (addrData[i].addr_is_default==='true'){defaultClass='addr_default checked'} %>
@@ -91,15 +55,15 @@
                             <% for (let i=0;i<SKUData.length;i++){%>
                             <div class="checkout_item">
                                 <a href="#" class="col-xs-2">
-                                    <img src="<%=SKUData[i].SKU_pic_path%>>" alt="<%=SKUData[i].spec_option_value_color%><%=SKUData[i].spec_option_value_style%>">
+                                    <img src="<%=SKUData[i].SKU_pic_path%>" alt="<%=SKUData[i].spec_option_value_color%><%=SKUData[i].spec_option_value_style%>">
                                 </a>
-                                <div class="item_title col-xs-2">
+                                <div class="item_title col-xs-4">
                                     <div>
-                                        <strong><%=SKUData[i].SKU_name%>></strong><br><%=SKUData[i].spec_option_value_color%><%=SKUData[i].spec_option_value_style%>
+                                        <strong><%=SKUData[i].SKU_name%></strong><br><%=SKUData[i].spec_option_value_style%>
                                     </div>
                                 </div>
                                 <div class="col-xs-3">预计 2019-06-01前发货</div>
-                                <div class="col-xs-1">￥<%=SKUData[i].sell_price%>></div>
+                                <div class="col-xs-1">￥<%=SKUData[i].sell_price%></div>
                                 <div class="col-xs-2">
                                     <strong>×<%=SKUData[i].shopping_car_SKU_num%></strong>
                                 </div>
@@ -122,9 +86,18 @@
                         </div>
                         <div class="col-xs-6 price_info">
                             <div class="col-xs-6">
-                                <b>¥6598</b><br>
+                                <b class="totalPrice">¥
+                                    <%
+                                        let totalPrice=0;
+                                        for(let i=0;i<SKUData.length;i++){
+                                            totalPrice+=parseFloat(SKUData[i].sell_price)*parseFloat(SKUData[i].shopping_car_SKU_num);
+                                        }
+                                    %>
+                                    <%=totalPrice%>
+<!--                                    6598-->
+                                </b><br>
                                 <b>免邮</b><br>
-                                <b>¥6598</b>
+                                <b class="totalPrice">¥<%=totalPrice%></b>
                             </div>
                             <div class="col-xs-6">
                                 <span>商品合计</span><br>
@@ -148,20 +121,26 @@
                             <div class="col-xs-4 middle">
                                 地址：
                             </div>
-                            <div class="col-xs-8">
-                                张三 福建 莆田 涵江区 <br>
-                                皇后大道东35号
+                            <div class="col-xs-8" id="addrInFooter">
+                                <%for(let i=0;i<addrData.length;i++){%>
+                                    <% if (addrData[i].addr_is_default==='true'){%>
+                                    <span><%=addrData[i].addressee_name%></span>
+                                    <span><%=addrData[i].addressee_tel%></span><br>
+                                    <span><%=addrData[i].addr_province%></span>
+                                    <span><%=addrData[i].addr_city%></span>
+                                    <span><%=addrData[i].addr_district%></span><br>
+                                    <span><%=addrData[i].addr_detail%></span>
+                                    <%} %>
+                                <%}%>
                             </div>
                         </div>
                         <div class="col-xs-4 col-xs-offset-4">
                             <div class="col-xs-5 middle">
                                 实付：
-                                <strong>¥6598</strong>
+                                <strong class="totalPrice">¥<%=totalPrice%></strong>
                             </div>
                             <div class="col-xs-7 middle">
-                                <a href="pay.html">
-                                    <button type="button" class="btn btn-primary pull-right">结算</button>
-                                </a>
+                                <button type="button" class="btn btn-primary pull-right">结算</button>
                             </div>
                         </div>
                     </div>

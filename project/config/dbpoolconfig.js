@@ -2,7 +2,7 @@ const mysql=require("mysql");
 const dbpool={
     pool:{},
     config:{
-        host: "172.16.14.35",
+        host: "localhost",//172.16.14.35
         port: "3306",
         user: "root",
         password: "root",

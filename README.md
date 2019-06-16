@@ -1,3 +1,8 @@
+## 6/16更新
+
+1. 修正了导航样式BUG；
+2. 购物车逻辑完成；
+
 ## 6/15更新
 
 1. 更新node_modules;
@@ -10,7 +15,6 @@
 
    https://github.com/AC-0308/Interesting_PH3_git.git
 
-5. 
 
 ## 6-13更新
 

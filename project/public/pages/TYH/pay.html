@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>支付 - 榆林</title>
+    <title>支付 - 榆杨</title>
     <!--[if lt IE 9]>
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
@@ -876,28 +876,6 @@
 <script src="../../frame/less.min.js"></script>
 <script src="../../frame/jquery-3.4.1.min.js"></script>
 <script src="../../frame/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
-<script>
-    $(function () {
-        $(".huabei_item").hide();
-        // console.log($('input[name=pay_method]'));
-        $('input[name=pay_method]').on('change',function () {
-            console.log($('input[type=radio]'));
-            if ($('input[name=pay_method]')[2].checked){
-                $(".huabei_item").slideDown();
-            }else {
-                $(".huabei_item").slideUp();
-            }
-        });
-        $(".huabei_item").on('click',(e)=>{
-            $('.huabei_item').removeClass('active');
-            if ($(e.target).hasClass('huabei_item')){
-                $(e.target).addClass('active');
-            }else {
-                $(e.target).parents('.huabei_item').addClass('active');
-            }
-        });
-
-    });
-</script>
+<script src="../../js/shop/pay.js"></script>
 </body>
 </html>
