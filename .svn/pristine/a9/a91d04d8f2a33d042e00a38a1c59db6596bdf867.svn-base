@@ -1,5 +1,0 @@
-const express=require('express');
-const controller=require('../controller/shopping_controller');
-const router=express.Router();
-router.get('/shopping_car',controller.showCar);//展示购物车
-module.exports=router;

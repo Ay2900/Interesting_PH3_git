@@ -1,7 +1,0 @@
-const indexModule=require("../dao/indexDao");
-const indexController={
-    index(request,response){
-
-        response.render('index',{list:data})
-    }
-};

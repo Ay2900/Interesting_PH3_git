@@ -1,8 +1,0 @@
-<!--[if lt IE 9]>
-<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-<link rel="stylesheet" href="./css/nav-footer/nav.css"><!--导航样式表-->
-<link rel="stylesheet" href="./frame/custom-bootstrap/custom-bootstrap.css"><!--项目主题样式表-->
-<link rel="stylesheet" href="./frame/font-awesome-4.7.0/css/font-awesome.css"><!--font-awesome图标样式引用-->
-<link rel="stylesheet" href="./fonts/header_footer/iconfont.css"><!--导航图标字体引用-->

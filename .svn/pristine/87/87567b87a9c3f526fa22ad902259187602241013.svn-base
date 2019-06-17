@@ -1,7 +1,0 @@
-const express=require('express');
-const router=express.Router();
-router.get('/mytest',function (req,resp) {
-    resp.render('common/sample',{})
-});
-
-module.exports=router;

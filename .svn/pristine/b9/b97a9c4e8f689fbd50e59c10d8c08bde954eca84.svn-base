@@ -1,9 +1,0 @@
-body{
-    background-color: #ececec;
-    >div{
-        width: 30vw;
-        position: absolute;
-        top: 20vh;
-        left: 50%-15vw;
-    }
-}
